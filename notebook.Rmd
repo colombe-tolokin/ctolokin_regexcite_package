@@ -13,6 +13,49 @@ use_git()
 ```
 
 ```{r}
-use_mit_license(name = "Colombe Tolokin")
+(x <- "alfa,bravo,charlie,delta")
+#> [1] "alfa,bravo,charlie,delta"
+strsplit(x, split = ",")
+#> [[1]]
+#> [1] "alfa"    "bravo"   "charlie" "delta"
+```
+```{r}
+str(strsplit(x, split = ","))
+#> List of 1
+#>  $ : chr [1:4] "alfa" "bravo" "charlie" "delta"
 ```
 
+
+```{r}
+unlist(strsplit(x, split = ","))
+#> [1] "alfa"    "bravo"   "charlie" "delta"
+```
+
+
+```{r}
+strsplit(x, split = ",")[[1]]
+#> [1] "alfa"    "bravo"   "charlie" "delta"
+```
+
+
+
+```{r}
+use_r("strsplit1")
+#> ☐ Edit 'R/strsplit1.R'.
+```
+
+
+```{r}
+# install.packages("devtools")  # Install devtools if not already installed
+#library(devtools)              # Load the devtools package
+load_all()                     # Run load_all()
+#> ℹ Loading regexcite
+```
+
+
+```{r}
+(x <- "alfa,bravo,charlie,delta")
+#> [1] "alfa,bravo,charlie,delta"
+strsplit1(x, split = ",")
+#> [1] "alfa"    "bravo"   "charlie" "delta"
+```
